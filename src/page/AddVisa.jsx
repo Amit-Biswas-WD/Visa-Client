@@ -31,6 +31,21 @@ const AddVisa = () => {
       fee,
     };
     console.log(value);
+
+    fetch("http://localhost:5000/addVisa", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(value),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          alert("Visa data added successfully");
+        }
+      });
   };
 
   return (
@@ -110,7 +125,7 @@ const AddVisa = () => {
           </div>
 
           <div className="w-full">
-          <label className="fieldset-label my-2 text-lg font-semibold">
+            <label className="fieldset-label my-2 text-lg font-semibold">
               Fee:
             </label>
 
@@ -120,7 +135,7 @@ const AddVisa = () => {
               required
               defaultValue=""
             >
-            <option value="" disabled>
+              <option value="" disabled>
                 Select Fee
               </option>
               <option name="fee" value="5000 USD">

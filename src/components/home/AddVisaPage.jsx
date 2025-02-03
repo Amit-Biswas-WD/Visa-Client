@@ -50,7 +50,7 @@ const AddVisaPage = () => {
   ];
 
   return (
-    <div className="my-20">
+    <div className="mt-20">
       <div className="relative">
         {/* Background Section */}
         <div

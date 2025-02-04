@@ -6,6 +6,7 @@ import AddVisa from "./../page/AddVisa";
 import MyAddedVisas from "../page/MyAddedVisas";
 import MyVisaApplications from "./../page/MyVisaApplications";
 import AllVisaDetails from "../components/AllVisaDetails";
+import Update from "../components/Update";
 
 export const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ export const router = createBrowserRouter([
       {
         path: "/visaApplications",
         element: <MyVisaApplications />,
+      },
+      {
+        path: "/update",
+        element: <Update />,
       },
     ],
   },

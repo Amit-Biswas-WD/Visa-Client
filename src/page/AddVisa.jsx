@@ -51,8 +51,8 @@ const AddVisa = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleAddVisa} className="container mx-auto">
+    <div className="my-4 container mx-auto">
+      <form onSubmit={handleAddVisa}>
         <div className="flex gap-10 my-4">
           <div className="w-full">
             <label className="fieldset-label my-2 text-lg font-semibold">

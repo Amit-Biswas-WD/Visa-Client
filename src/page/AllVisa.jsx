@@ -6,7 +6,7 @@ const AllVisa = () => {
   console.log(allData);
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto my-4">
       <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10">
         {allData.map((items) => (
           <div

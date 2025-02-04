@@ -1,23 +1,5 @@
 const MyVisaApplications = () => {
   return (
-    // <div className="container mx-auto my-4 grid md:grid-cols-2 sm:grid-cols-1 gap-10">
-    //   <div className="flex gap-6 border border-amber-300 shadow-2xl w-full">
-    //     <img
-    //       className="w-[48%]"
-    //       src="https://i.ibb.co.com/yc7jZdhn/image1.png"
-    //       alt=""
-    //     />
-    //     <div className="w-[48%] my-2">
-    //       <h2 className="text-2xl font-semibold">Country Name</h2>
-    //       <p className="text-base font-normal my-1">Visa_type</p>
-    //       <p className="text-base font-normal my-1">Processing_time</p>
-    //       <p className="text-base font-normal my-1">Fee</p>
-    //       <p className="text-base font-normal my-1">Validity</p>
-    //       <p className="text-base font-normal my-1">Application_method</p>
-    //       <p className="text-base font-normal my-1">Applied_date</p>
-    //     </div>
-    //   </div>
-    // </div>
     <div>
       <div className="overflow-x-auto">
         <table className="table">

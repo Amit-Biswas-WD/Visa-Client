@@ -22,9 +22,9 @@ const AllVisaDetails = () => {
       <h2 className="text-2xl font-semibold">
         AllVisaDetails: {allData.country_name}
       </h2>
-      <div className="my-8">
-        <div className="md:flex gap-8">
-          <img className="w-[600px] h-auto" src={url} alt="" />
+      <div className="my-8 border border-yellow-400 shadow-2xl p-4 rounded-lg">
+      <div className="md:flex gap-8">
+          <img className="w-[400px] h-auto" src={url} alt="" />
           <div>
             <h2 className="text-2xl font-bold my-3">
                {country_name}

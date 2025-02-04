@@ -78,13 +78,15 @@ const MyAddedVisas = () => {
               <td>{visa.application_method}</td>
               <th>
                 <Link to={`/update/${visa._id}`}>
-                <button className="btn btn-ghost btn-xs">Update</button>
+                  <button className="btn btn-ghost btn-xs border border-green-400 hover:text-white bg-green-300 hover:bg-green-600">
+                    Update
+                  </button>
                 </Link>
               </th>
               <th>
                 <button
                   onClick={() => handleDelete(visa._id)}
-                  className="btn btn-ghost btn-xs"
+                  className="btn btn-ghost btn-xs border border-red-400 hover:text-white bg-red-300 hover:bg-red-600"
                 >
                   Delete
                 </button>

@@ -14,7 +14,7 @@ const AllVisa = () => {
             className="border border-gray-300 shadow-xl rounded-lg"
           >
             <img
-              className="w-full h-auto object-cover"
+              className="w-[25%] h-auto mx-auto my-4 object-cover"
               src={items.url}
               alt=""
             />

@@ -233,15 +233,19 @@ const AddVisa = () => {
             <label className="fieldset-label my-2 text-lg font-semibold">
               Required Documents:
             </label>
+
             <div className="flex gap-2 items-center">
               <input
+                name="required_documents"
                 type="checkbox"
                 id="passport"
-                name="required_documents"
                 value="Valid passport"
               />
-              <label className="fieldset-label">Valid passport</label>
+              <label htmlFor="passport" className="fieldset-label">
+                Valid passport
+              </label>
             </div>
+
             <div className="flex gap-2 items-center">
               <input
                 type="checkbox"
@@ -249,20 +253,24 @@ const AddVisa = () => {
                 name="required_documents"
                 value="Visa application form"
               />
-              <label className="fieldset-label">Visa application form</label>
+              <label htmlFor="application_form" className="fieldset-label">
+                Visa application form
+              </label>
             </div>
+
             <div className="flex gap-2 items-center">
               <input
                 type="checkbox"
                 id="photo"
-                name="required_documents"
+                name="required_documents" 
                 value="Recent passport-sized photograph"
               />
-              <label className="fieldset-label">
+              <label htmlFor="photo" className="fieldset-label">
                 Recent passport-sized photograph
               </label>
             </div>
           </div>
+
           <div className="w-full">
             <label className="fieldset-label my-2 text-lg font-semibold">
               Description:

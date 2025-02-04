@@ -1,11 +1,8 @@
-import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
-import Swal from "sweetalert2";
 
 const Update = () => {
   const allUpdate = useLoaderData();
-  const [allData, setAllData] = useState(allUpdate);
   const {
     _id,
     country_name,
@@ -19,7 +16,7 @@ const Update = () => {
     processing_date,
     age_restriction,
     fee,
-  } = allData;
+  } = allUpdate;
   //   Swal.fire({
   //     title: "Are you sure?",
   //     text: "You won't be able to revert this!",

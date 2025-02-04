@@ -80,7 +80,7 @@ const Navbar = () => {
       {/* Mobile Navbar */}
       <div className="lg:hidden flex p-4 relative text-[#499DEC]">
         <Link to={`/`}>
-          <img src="https://i.ibb.co.com/s9STyky/4.png" alt="" />
+          <img src="https://evisa.xpressbuddy.com/wp-content/uploads/2023/12/logo.svg" alt="" />
         </Link>
         <div className="relative justify-end">
           {/* Menu Button (Hamburger or Close Icon) */}

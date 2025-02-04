@@ -58,24 +58,57 @@ const AddVisa = () => {
             <label className="fieldset-label my-2 text-lg font-semibold">
               Country Name:
             </label>
-            <input
+            <select
+              className="w-full border border-gray-300 p-2 rounded-md"
               name="country_name"
-              type="text"
-              className="input w-full"
-              placeholder="Country Name"
               required
-            />
+              defaultValue=""
+            >
+              <option value="" disabled>
+                Select Country Name
+              </option>
+              <option value="United states country">
+                United States Country
+              </option>
+              <option value="Australia country">Australia Country</option>
+              <option value="Dubai country">Dubai Country</option>
+              <option value="Los angeles country">Los Angeles Country</option>
+              <option value="India country">India Country</option>
+              <option value="Dubai country">Dubai Country</option>
+            </select>
           </div>
           <div className="w-full">
             <label className="fieldset-label my-2 text-lg font-semibold">
               Country Image:
             </label>
-            <input
+            <select
+              className="w-full border border-gray-300 p-2 rounded-md"
               name="url"
-              type="url"
-              className="input w-full"
-              placeholder="image URL"
-            />
+              required
+              defaultValue=""
+            >
+              <option value="" disabled>
+                Select Country URL
+              </option>
+              <option value="United states country">
+                United States Country
+              </option>
+              <option value="https://i.ibb.co.com/mrC3PbTd/australia.jpg">
+                Australia country
+              </option>
+              <option value="https://i.ibb.co.com/rRDn5Vhf/United-States.jpg">
+                United States
+              </option>
+              <option value="https://i.ibb.co.com/ymnQTBtD/Los-Angeles.jpg">
+                Los angeles country
+              </option>
+              <option value="https://i.ibb.co.com/LdVcssVK/India.jpg">
+                India country
+              </option>
+              <option value="https://i.ibb.co.com/9mDmkLMc/dubai.jpg">
+                Dubai country
+              </option>
+            </select>
           </div>
         </div>
 

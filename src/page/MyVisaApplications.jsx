@@ -19,7 +19,7 @@ const MyVisaApplications = () => {
           </thead>
           <tbody>
             {/* row 1 */}
-            <tr>
+            {/* <tr>
               <th>1</th>
               <td>
                 <div className="flex items-center gap-3">
@@ -49,7 +49,7 @@ const MyVisaApplications = () => {
               <th>
                 <button className="btn btn-ghost btn-xs">Delete</button>
               </th>
-            </tr>
+            </tr> */}
           </tbody>
         </table>
       </div>

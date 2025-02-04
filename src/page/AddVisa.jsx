@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const AddVisa = () => {
   const handleAddVisa = (event) => {
     event.preventDefault();
@@ -35,7 +37,7 @@ const AddVisa = () => {
     fetch("http://localhost:5000/addVisa", {
       method: "POST",
       headers: {
-        "Content-type": "application/json",
+        "content-type": "application/json",
       },
       body: JSON.stringify(value),
     })
@@ -43,7 +45,7 @@ const AddVisa = () => {
       .then((data) => {
         console.log(data);
         if (data.insertedId) {
-          alert("Visa data added successfully");
+          toast("Visa data added successfully");
         }
       });
   };

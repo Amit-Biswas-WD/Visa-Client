@@ -79,8 +79,8 @@ const AddVisaPage = () => {
             disableOnInteraction: false,
             waitForTransition: true,
           }}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
         >
           {value.map((value) => (
             <SwiperSlide key={value.id}>

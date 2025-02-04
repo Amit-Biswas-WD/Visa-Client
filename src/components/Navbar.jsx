@@ -7,19 +7,49 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const items = [
-    <NavLink key={`/`} to={`/`}>
+    <NavLink
+      className={({ isActive }) =>
+        isActive ? "text-red-500" : "text-gray-700"
+      }
+      key={`/`}
+      to={`/`}
+    >
       Home
     </NavLink>,
-    <NavLink key={`/allVisa`} to={`/allVisa`}>
+    <NavLink
+      className={({ isActive }) =>
+        isActive ? "text-red-500" : "text-gray-700"
+      }
+      key={`/allVisa`}
+      to={`/allVisa`}
+    >
       All Visa
     </NavLink>,
-    <NavLink key={`/addVisa`} to={`/addVisa`}>
+    <NavLink
+      className={({ isActive }) =>
+        isActive ? "text-red-500" : "text-gray-700"
+      }
+      key={`/addVisa`}
+      to={`/addVisa`}
+    >
       Add Visa
     </NavLink>,
-    <NavLink key={`/addedVisas`} to={`/addedVisas`}>
+    <NavLink
+      className={({ isActive }) =>
+        isActive ? "text-red-500" : "text-gray-700"
+      }
+      key={`/addedVisas`}
+      to={`/addedVisas`}
+    >
       My Added Visas
     </NavLink>,
-    <NavLink key={`/visaApplications`} to={`/visaApplications`}>
+    <NavLink
+      className={({ isActive }) =>
+        isActive ? "text-red-500" : "text-gray-700"
+      }
+      key={`/visaApplications`}
+      to={`/visaApplications`}
+    >
       My Visa Applications
     </NavLink>,
   ];
@@ -37,7 +67,7 @@ const Navbar = () => {
           </Link>
           <ul className="flex items-center gap-8 text-lg">
             {items.map((item, index) => (
-              <li className="" key={index}>
+              <li key={index}>
                 {item}
               </li>
             ))}

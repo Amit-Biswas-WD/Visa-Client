@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const MyAddedVisas = () => {
@@ -77,7 +77,9 @@ const MyAddedVisas = () => {
               <td>{visa.validity}</td>
               <td>{visa.application_method}</td>
               <th>
+                <Link to={`/update/${visa._id}`}>
                 <button className="btn btn-ghost btn-xs">Update</button>
+                </Link>
               </th>
               <th>
                 <button

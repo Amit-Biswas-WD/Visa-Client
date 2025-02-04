@@ -42,8 +42,10 @@ export const router = createBrowserRouter([
         element: <MyVisaApplications />,
       },
       {
-        path: "/update",
+        path: "/update/:id",
         element: <Update />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/addVisa/${params.id}`),
       },
     ],
   },

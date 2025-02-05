@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaEyeSlash } from "react-icons/fa6";
 import { IoIosEye } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Registation = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -14,6 +15,21 @@ const Registation = () => {
     const password = form.password.value;
     const value = { name, photo, email, password };
     console.log(value);
+
+    fetch("http://localhost:5000/usersVisa", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(value),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          toast("User Registation Successfully!");
+        }
+      });
   };
 
   return (

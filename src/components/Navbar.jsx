@@ -67,20 +67,23 @@ const Navbar = () => {
           </Link>
           <ul className="flex items-center gap-8 text-lg">
             {items.map((item, index) => (
-              <li key={index}>
-                {item}
-              </li>
+              <li key={index}>{item}</li>
             ))}
           </ul>
         </div>
         <div>
-          <button className="text-lg">Login</button>
+          <Link to={`/registation`}>
+            <button className="text-lg btn">Login</button>
+          </Link>
         </div>
       </div>
       {/* Mobile Navbar */}
       <div className="lg:hidden flex p-4 relative text-[#499DEC]">
         <Link to={`/`}>
-          <img src="https://evisa.xpressbuddy.com/wp-content/uploads/2023/12/logo.svg" alt="" />
+          <img
+            src="https://evisa.xpressbuddy.com/wp-content/uploads/2023/12/logo.svg"
+            alt=""
+          />
         </Link>
         <div className="relative justify-end">
           {/* Menu Button (Hamburger or Close Icon) */}

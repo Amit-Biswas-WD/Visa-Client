@@ -7,6 +7,8 @@ import MyAddedVisas from "../page/MyAddedVisas";
 import MyVisaApplications from "./../page/MyVisaApplications";
 import AllVisaDetails from "../components/AllVisaDetails";
 import Update from "../components/Update";
+import Registation from "../page/Registration";
+import Login from "../page/Login";
 
 export const router = createBrowserRouter([
   {
@@ -47,6 +49,14 @@ export const router = createBrowserRouter([
         element: <Update />,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/addVisa/${params.id}`),
+      },
+      {
+        path: "/registation",
+        element: <Registation/>
+      },
+      {
+        path: "/login",
+        element: <Login/>
       },
     ],
   },

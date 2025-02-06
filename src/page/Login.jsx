@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaEyeSlash } from "react-icons/fa6";
 import { IoIosEye } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const { signInEmailPassword } = useContext(AuthContext);
+
   const handleSignInForm = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -12,6 +16,15 @@ const Login = () => {
     const password = form.password.value;
     const value = { email, password };
     console.log(value);
+
+    signInEmailPassword(email, password)
+      .then((userCredential) => {
+        console.log(userCredential.user);
+        toast("SignIn User Successfully!");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (

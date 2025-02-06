@@ -7,7 +7,7 @@ import { AuthContext } from "../provider/AuthProvider";
 
 const Registation = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const { createUser, googleSingUp } = useContext(AuthContext);
+  const { createUser, googleSingUp, githubSingUp } = useContext(AuthContext);
 
   const handleSignUpForm = (event) => {
     event.preventDefault();
@@ -45,6 +45,16 @@ const Registation = () => {
 
   const handleGoogle = () => {
     googleSingUp()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .then((err) => {
+        console.log(err);
+      });
+  };
+
+  const handleGithub = () => {
+    githubSingUp()
       .then((result) => {
         console.log(result.user);
       })
@@ -150,7 +160,10 @@ const Registation = () => {
               </svg>
               Google
             </button>
-            <button className="flex btn items-center gap-2 px-4 py-2 bg-black hover:bg-gray-900 text-white rounded-md shadow-md">
+            <button
+              onClick={handleGithub}
+              className="flex btn items-center gap-2 px-4 py-2 bg-black hover:bg-gray-900 text-white rounded-md shadow-md"
+            >
               <svg
                 className="w-5 h-5"
                 fill="currentColor"

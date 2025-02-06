@@ -1,10 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const  valueInfo  = useContext(AuthContext);
+  console.log(valueInfo);
 
   const items = [
     <NavLink

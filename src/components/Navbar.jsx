@@ -6,8 +6,8 @@ import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const  valueInfo  = useContext(AuthContext);
-  console.log(valueInfo);
+  const { users } = useContext(AuthContext);
+  console.log(users);
 
   const items = [
     <NavLink

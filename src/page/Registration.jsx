@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaEyeSlash } from "react-icons/fa6";
 import { IoIosEye } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Registation = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const { createUser } = useContext(AuthContext);
+
   const handleSignUpForm = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -29,6 +32,14 @@ const Registation = () => {
         if (data.insertedId) {
           toast("User Registation Successfully!");
         }
+      });
+
+    createUser(email, password)
+      .then((userCredential) => {
+        console.log(userCredential.user);
+      })
+      .catch((err) => {
+        console.log(err);
       });
   };
 
